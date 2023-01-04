@@ -32,3 +32,23 @@ def bfs(visited, graph, node):
             if neighbor not in visited:
                 visited.append(neighbor)
                 queue.append(neighbor)
+
+def bubble_sort(aList):
+    '''
+    Sorts aList using bubble sort method. Not recommended for actual use.
+
+    params:
+        - aList: List
+    '''
+    n = len(aList)
+    for i in range(n):
+        sorted = True
+        for j in range(n - i - 1):
+            if aList[j] > aList[j + 1]:
+                aList[j], aList[j + 1] = aList[j + 1], aList[j]
+                sorted = False
+
+        if sorted:
+            break
+
+    return aList
