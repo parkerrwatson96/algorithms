@@ -21,7 +21,7 @@ def bfs(visited, graph, node):
         - graph: dict<str,List[str]>
         - node: str
     '''
-    queue = 0
+    queue = []
 
     visited.append(node)
     queue.append(node)
@@ -30,5 +30,5 @@ def bfs(visited, graph, node):
         curr_node = queue.pop(0)
         for neighbor in graph[curr_node]:
             if neighbor not in visited:
-                visited.append(curr_node)
-                queue.append(curr_node)
+                visited.append(neighbor)
+                queue.append(neighbor)
